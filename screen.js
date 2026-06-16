@@ -1,6 +1,6 @@
 // Step Mode plugin for Slopsmith
 //
-// Rocksmith-1-style practice mode: the highway freezes at each chart note until
+// a step-by-step practice mode: the highway freezes at each chart note until
 // the player hits it (via notedetect) or presses Space. Lets the user work
 // through fast solos at their own pace without losing audio/visual sync.
 //

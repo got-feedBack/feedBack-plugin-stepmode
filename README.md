@@ -1,6 +1,6 @@
 # Slopsmith Step Mode Plugin
 
-Rocksmith-1-style practice mode for [Slopsmith](https://github.com/byrongamatos/slopsmith) — the highway freezes at each chart note until you play it (or press Space). Lets you work through fast solos at your own pace, focusing on the pattern rather than the timing.
+a step-by-step practice mode for [Slopsmith](https://github.com/byrongamatos/slopsmith) — the highway freezes at each chart note until you play it (or press Space). Lets you work through fast solos at your own pace, focusing on the pattern rather than the timing.
 
 Implements [slopsmith#52](https://github.com/byrongamatos/slopsmith/issues/52).
 
