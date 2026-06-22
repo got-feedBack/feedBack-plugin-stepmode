@@ -3,5 +3,8 @@
   "name": "Step Mode",
   "version": "0.1.0",
   "private": false,
-  "script": "screen.js"
+  "script": "screen.js",
+  "category": "practice",
+  "description": "Step through a chart note by note.",
+  "icon": "assets/thumb.svg"
 }
