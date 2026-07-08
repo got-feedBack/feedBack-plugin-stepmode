@@ -799,6 +799,15 @@
         }
     }
 
+    // Node-only export hook for tests; browsers fall through to bootstrap.
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = {
+            stringFretToName, rebuildChartEvents, resetCursor, findNextEvent,
+            _getState: () => ({ chartEvents, nextEventIdx }),
+        };
+        return;
+    }
+
     // ── Bootstrap ───────────────────────────────────────────────────────
 
     window.addEventListener('notedetect:verify', onNoteDetectVerify);
