@@ -1,14 +1,14 @@
 # Slopsmith Step Mode Plugin
 
-a step-by-step practice mode for [Slopsmith](https://github.com/got-feedback/feedback) — the highway freezes at each chart note until you play it (or press Space). Lets you work through fast solos at your own pace, focusing on the pattern rather than the timing.
+a step-by-step practice mode for [Slopsmith](https://github.com/got-feedback/feedBack) — the highway freezes at each chart note until you play it (or press Space). Lets you work through fast solos at your own pace, focusing on the pattern rather than the timing.
 
-Implements [slopsmith#52](https://github.com/got-feedback/feedback/issues/52).
+Implements [slopsmith#52](https://github.com/got-feedback/feedBack/issues/52).
 
 ## Install
 
 ```bash
 cd plugins
-git clone https://github.com/got-feedback/feedback-plugin-stepmode.git step_mode
+git clone https://github.com/got-feedback/feedBack-plugin-stepmode.git step_mode
 # restart Slopsmith
 ```
 
@@ -17,14 +17,14 @@ git clone https://github.com/got-feedback/feedback-plugin-stepmode.git step_mode
 1. Load a song, click **Step** in the player controls to turn Step Mode on
 2. Playback proceeds normally until just before each chart note, then pauses
 3. A "Waiting for…" overlay appears showing the expected note
-4. Play the note (with [Note Detection](https://github.com/got-feedback/feedback-plugin-notedetect) active) — or press **Space** — to advance
+4. Play the note (with [Note Detection](https://github.com/got-feedback/feedBack-plugin-notedetect) active) — or press **Space** — to advance
 5. Audio resumes at whatever speed the speed slider was set to
 
 When you hit the note, step-mode jumps immediately to watching for the next one. When you miss (or just pause to think), the highway stays frozen until you're ready.
 
 ## Interop with Note Detection
 
-- If [`slopsmith-plugin-notedetect`](https://github.com/got-feedback/feedback-plugin-notedetect) is installed and active, step-mode advances automatically when you play the correct note. The `notedetect:hit` event is the signal; string/fret and chart-note time have to match.
+- If [`slopsmith-plugin-notedetect`](https://github.com/got-feedback/feedBack-plugin-notedetect) is installed and active, step-mode advances automatically when you play the correct note. The `notedetect:hit` event is the signal; string/fret and chart-note time have to match.
 - If Note Detection isn't installed or is toggled off, **Space** is the only advance mechanism. The waiting overlay's hint text updates to reflect which mode you're in.
 - Either way, **Space always works** as an escape hatch — useful for unreachable frets or when you just want to skip a note.
 
@@ -40,7 +40,7 @@ For v1, a chord counts as "played" if **any one** of its notes is detected as a 
 
 - Slopsmith v1.x+ (plugin system with `window.playSong` + `highway.getNotes()` / `getChords()`)
 - Modern browser with `<audio>` element (all modern browsers)
-- *Optional* but recommended: [Note Detection plugin](https://github.com/got-feedback/feedback-plugin-notedetect) v1.1+ — provides the per-note `notedetect:hit` event that lets step-mode advance on a successfully-played note without requiring keyboard input.
+- *Optional* but recommended: [Note Detection plugin](https://github.com/got-feedback/feedBack-plugin-notedetect) v1.1+ — provides the per-note `notedetect:hit` event that lets step-mode advance on a successfully-played note without requiring keyboard input.
 
 ## Technical notes
 
